@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nombre": "Préstamo Personal",
+        "tasa": 45
+    },
+    {
+        "id": 2,
+        "nombre": "Préstamo Automotor",
+        "tasa": 35
+    },
+    {
+        "id": 3,
+        "nombre": "Préstamo Hipotecario",
+        "tasa": 25
+    },
+    {
+        "id": 4,
+        "nombre": "Microcrédito Emprendedor",
+        "tasa": 55
+    }
+]
