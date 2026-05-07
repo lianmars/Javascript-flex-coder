@@ -11,7 +11,8 @@ body {
   background: linear-gradient(135deg, #0f172a, #1e293b, #0ea5e9);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 40px;
   color: white;
   overflow-x: hidden;
 }
@@ -105,10 +106,11 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 0.95rem;
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 10px 25px rgba(14, 165, 233, 0.5);
 }
 
@@ -120,7 +122,7 @@ button:hover {
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   animation: fadeIn 1s ease;
-
+  margin-bottom: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -149,12 +151,101 @@ button:hover {
 }
 
 
-canvas {
-  margin-top: 20px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  padding: 10px;
+.btn-confirmar {
+  grid-column: span 2;
+  display: none;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.btn-confirmar:hover {
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.5);
+}
+
+
+.btn-historial {
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-historial:hover {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.historial-container {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.historial-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+
+.historial-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+}
+
+.historial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.historial-numero {
+  font-weight: bold;
+  color: #0ea5e9;
+  font-size: 1rem;
+}
+
+.historial-fecha {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.historial-detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.historial-detalle strong {
+  color: #38bdf8;
+}
+
+.historial-vacio {
+  text-align: center;
+  opacity: 0.6;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+
+.btn-limpiar {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.btn-limpiar:hover {
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.5);
 }
 
 
@@ -175,6 +266,7 @@ canvas {
 
   body {
     padding: 10px;
+    padding-top: 20px;
   }
 
   h1 {
@@ -185,12 +277,15 @@ canvas {
     padding: 18px;
   }
 
-
   .result-card {
     grid-template-columns: 1fr;
   }
 
   .result-card h2 {
+    grid-column: span 1;
+  }
+
+  .btn-confirmar {
     grid-column: span 1;
   }
 
